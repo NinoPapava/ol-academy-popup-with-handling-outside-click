@@ -1,4 +1,3 @@
-import '../styles/PopupContent.scss'
 
 const PopupContent = () => {
 
