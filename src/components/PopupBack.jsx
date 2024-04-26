@@ -1,8 +1,9 @@
 import React from 'react'
 
-const PopupBack = () => {
+const PopupBack = ({ children }) => {
   return (
     <div className='background' >
+      {children}
     </div>
   )
 }
