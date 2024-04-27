@@ -1,8 +1,8 @@
-import React from 'react'
+import '../styles/PopupBack.scss'
+const PopupBack = ({ children, onClick }) => {
 
-const PopupBack = ({ children }) => {
   return (
-    <div className='background' >
+    <div className='background' onClick={onClick} >
       {children}
     </div>
   )
