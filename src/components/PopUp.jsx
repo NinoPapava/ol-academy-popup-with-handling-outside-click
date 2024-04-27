@@ -4,6 +4,24 @@ import { PopupContent } from './PopupContent';
 
 const PopUp = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const popupRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (popupRef.current && popupRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <div className='container'>
@@ -11,7 +29,7 @@ const PopUp = () => {
         {isOpen ? (
           <>
             <PopupBack >
-              <PopupContent  />
+              <PopupContent />
             </PopupBack>
           </>
         ) : (

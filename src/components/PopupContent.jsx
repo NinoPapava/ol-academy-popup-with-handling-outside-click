@@ -1,11 +1,11 @@
 
-const PopupContent = ({ onClose }) => {
+const PopupContent = ({ onClose, onClick }) => {
 
   return (
     <div className='content'>
       <h1>This is Our Popup</h1>
       <div className='close-button'>
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClick}>Close</button>
       </div>
     </div>
   )
