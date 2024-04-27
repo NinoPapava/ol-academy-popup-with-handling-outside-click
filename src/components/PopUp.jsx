@@ -14,11 +14,10 @@ const PopUp = () => {
   };
 
   useEffect(() => {
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
+    isOpen
+      ? document.addEventListener('mousedown', handleClickOutside)
+      : document.removeEventListener('mousedown', handleClickOutside);
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
