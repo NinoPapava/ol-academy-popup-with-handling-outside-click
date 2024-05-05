@@ -34,7 +34,7 @@ const PopUp = () => {
           </>
         ) : (
           <>
-            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Close' : 'Open Popup'}</button>
+            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Close' : 'ORDER IT'}</button>
           </>
         )}
       </div>
