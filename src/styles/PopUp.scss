@@ -7,6 +7,20 @@
   align-items: center;
   height: 100vh;
 }
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter:  blur(3px);
+  background-size: cover;
+  background-position: center;
+  z-index: 999; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container-background {
   position: relative;
@@ -41,3 +55,17 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+.content {
+  background-color: #aca4a1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #373883;
+}
+
